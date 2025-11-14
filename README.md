@@ -4,7 +4,7 @@ A tool for your images. As simple as it sounds.
 
 ## 🚀 Usage
 
-Use the live web app → [imgtool.netlify.app](https://imgtool.netlify.app).
+Use the live web app → [useimgtool](https://useimgtool.netlify.app).
 
 Or, host it yourself 👇.
 
