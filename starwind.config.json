@@ -1,0 +1,31 @@
+{
+  "$schema": "https://starwind.dev/config-schema.json",
+  "tailwind": {
+    "css": "src/styles/starwind.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "componentDir": "src/components",
+  "components": [
+    {
+      "name": "dropzone",
+      "version": "1.2.0"
+    },
+    {
+      "name": "tabs",
+      "version": "1.4.0"
+    },
+    {
+      "name": "select",
+      "version": "1.6.1"
+    },
+    {
+      "name": "button",
+      "version": "2.2.0"
+    },
+    {
+      "name": "label",
+      "version": "1.2.0"
+    }
+  ]
+}

@@ -1,46 +1,41 @@
-# Astro Starter Kit: Basics
+# 🖼️ Imgtool
 
-```sh
-bun create astro@latest -- --template basics
-```
+A tool for your images. As simple as it sounds.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 🚀 Usage
 
-## 🚀 Project Structure
+Use the live web app → [imgtool.netlify.app](https://imgtool.netlify.app).
 
-Inside of your Astro project, you'll see the following folders and files:
+Or, host it yourself 👇.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/wasituf/imgtool)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## 👨‍🏭 Under the hood
 
-## 🧞 Commands
+Under the hood, imgtool uses various libraries to process images, but the core
+of it all are the [Squoosh](https://github.com/GoogleChromeLabs/squoosh) codecs
+made by Google. Squoosh is an open source web app that provides amazing results
+by utilizing web workers in the browser. Imgtool specifically uses the
+[jSquash](https://github.com/jamsinclair/jSquash) implementations of the codecs.
 
-All commands are run from the root of the project, from a terminal:
+This is the short of how the process works:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `bun install`             | Installs dependencies                            |
-| `bun dev`             | Starts local dev server at `localhost:4321`      |
-| `bun build`           | Build your production site to `./dist/`          |
-| `bun preview`         | Preview your build locally, before deploying     |
-| `bun astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `bun astro -- --help` | Get help using the Astro CLI                     |
+1. The user uploads an image.
+2. The image is decoded into raw image data using one of several jSquash
+   helpers.
+3. The image data is edited using various libraries and custom functionality.
+4. The image is encoded into the desired output format using jSquash helpers.
 
-## 👀 Want to learn more?
+## Licenses
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Both jSquash, and the Squoosh codecs use the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt).
+- Imgtool uses the widely loved, and permissible [MIT License](./LICENSE).
+
+## Acknowledgements
+
+- Built with [Astro](https://astro.build).
+- Thanks to:
+  - [Squoosh](https://github.com/GoogleChromeLabs/squoosh) for creating the
+    image codecs.
+  - [jSquash](https://github.com/jamsinclair/jSquash) for creating and
+    maintaining the squoosh implementation for browser environments.
