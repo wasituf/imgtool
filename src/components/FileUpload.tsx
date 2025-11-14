@@ -117,7 +117,7 @@ export default function FileUpload() {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex items-center justify-between gap-2">
-        <h1 className="ms-1 font-bold text-2xl opacity-80">ImgTool</h1>
+        <h1 className="ms-1 font-bold text-3xl opacity-80">ImgTool</h1>
         <Tooltip>
           <TooltipTrigger>
             <Toggle
@@ -428,9 +428,9 @@ export default function FileUpload() {
             </AlertTitle>
             <AlertDescription className="text-accent-secondary-foreground/85">
               <span>
-                The highest optimization level will considerably degrade the
-                image quality. If you are looking for the best results, use the
-                medium setting. That is the same as using{" "}
+                The highest optimization level will considerably degrade image
+                quality. For best results, use the medium setting. That is the
+                same as using{" "}
                 <span className="font-medium text-accent-secondary-foreground">
                   conversion mode
                 </span>
